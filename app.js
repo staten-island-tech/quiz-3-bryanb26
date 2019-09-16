@@ -14,4 +14,12 @@ function tipCalc(bills){
 
 let bills = [140, 45, 270];
 let tips = [tipCalc(bills[0]), tipCalc(bills[1]), tipCalc(bills[2])];
-let finalCost = [bills[0] + tips[0], bills[1] + tips[1], bills[2] + tips[2]];
+let finalCosts = [bills[0] + tips[0], bills[1] + tips[1], bills[2] + tips[2]];
+
+function isGreater(num){
+    return(num > 100);
+}
+
+let copy = finalCosts.filter(isGreater);
+
+console.log(copy);
